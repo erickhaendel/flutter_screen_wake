@@ -1,6 +1,6 @@
 name: flutter_screen_wake
 description: A Flutter plugin to manage the device's screen on Android and iOS.
-version: 1.0.0
+version: 1.0.1
 homepage: https://github.com/erickhaendel/flutter_screen_wake
 
 environment:
