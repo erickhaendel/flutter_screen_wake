@@ -1,7 +1,6 @@
 name: flutter_screen_wake
 description: Flutter Screen Wake
 version: 1.0.0
-author: Erick Haendel
 homepage: https://github.com/erickhaendel
 
 environment:
