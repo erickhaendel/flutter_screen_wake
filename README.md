@@ -1,19 +1,36 @@
-# flutter_screen_wake
-
-Flutter Screen Wake
+# Flutter Screen Wake
 
 ```
 Plugin is Null Safety`
 ```
 
-## Getting Started
+[![pub package](https://img.shields.io/pub/v/screen.svg)](https://pub.dartlang.org/packages/flutter_screen_wake)
+A Flutter plugin to manage the device's screen on Android and iOS.
 
-This project is a starting point for a Flutter
-[plug-in package](https://flutter.dev/developing-packages/),
-a specialized package that includes platform-specific implementation code for
-Android and/or iOS.
+## Usage
+To use this plugin, add `flutter_screen_wake` as a [dependency in your pubspec.yaml file](https://flutter.io/platform-plugins/).
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Make sure you add the following permissions to your Android Manifest
 
+```xml
+<uses-permission android:name="android.permission.WAKE_LOCK" />
+```
+
+## Example
+
+``` dart
+// Import package
+import 'package:flutter_screen_wake/flutter_screen_wake.dart';
+
+// Get the current brightness:
+double brightness = await FlutterScreenWake.brightness;
+
+// Set the brightness:
+FlutterScreenWake.setBrightness(0.5);
+
+// Check if the screen is kept on:
+bool isKeptOn = await FlutterScreenWake.isKeptOn;
+
+// Prevent screen from going into sleep mode:
+FlutterScreenWake.keepOn(true);
+```
