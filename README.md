@@ -4,7 +4,7 @@
 Plugin is Null Safety`
 ```
 
-[![pub package](https://img.shields.io/pub/v/screen.svg)](https://pub.dartlang.org/packages/flutter_screen_wake)
+[![pub package](https://img.shields.io/pub/v/flutter_screen_wake.svg)](https://pub.dartlang.org/packages/flutter_screen_wake)
 A Flutter plugin to manage the device's screen on Android and iOS.
 
 ## Usage
