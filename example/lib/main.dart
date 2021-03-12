@@ -7,7 +7,6 @@ import 'package:flutter_screen_wake/flutter_screen_wake.dart';
 void main() {
   runApp(MyApp());
 }
-
 class MyApp extends StatefulWidget {
   @override
   _MyAppState createState() => _MyAppState();
