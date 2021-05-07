@@ -9,6 +9,17 @@ public class SwiftFlutterScreenWakePlugin: NSObject, FlutterPlugin {
   }
 
   public func handle(_ call: FlutterMethodCall, result: @escaping FlutterResult) {
-    result("iOS " + UIDevice.current.systemVersion)
+    switch call.method {
+        case "brightness":
+            result(UIScreen.main.brightness);
+        case "setBrightness":
+            if let args = call.arguments as? Dictionary<String, Any>,
+               let brightness = args["brightness"] as? Double {
+                UIScreen.main.brightness = CGFloat(brightness)
+                result(nil)
+            }
+        default:
+            result(FlutterMethodNotImplemented);
+    }
   }
 }
