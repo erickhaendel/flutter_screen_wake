@@ -16,7 +16,15 @@ public class SwiftFlutterScreenWakePlugin: NSObject, FlutterPlugin {
             if let args = call.arguments as? Dictionary<String, Any>,
                let brightness = args["brightness"] as? Double {
                 UIScreen.main.brightness = CGFloat(brightness)
-                result(nil)
+                result(nil);
+            }
+        case "isKeptOn":
+            result(UIApplication.shared.isIdleTimerDisabled);
+        case "keepOn":
+            if let args = call.arguments as? Dictionary<String, Any>,
+               let keepOn = args["on"] as? Bool {
+                UIApplication.shared.isIdleTimerDisabled = keepOn
+                result(nil);
             }
         default:
             result(FlutterMethodNotImplemented);
